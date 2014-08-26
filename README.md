@@ -1,5 +1,8 @@
 SIN
 ===
+---Note:
+The following is the change log for Schram in 'Nam. When creating commits, please make an entry in this file with the date & time stamp as well as a short description of what the commit is adding.
+
 8/25/14 7:03: repo init
 
 8/25/14 7:10: added image files
