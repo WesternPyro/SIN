@@ -6,7 +6,7 @@ import java.awt.event.KeyListener;
 
 public class KeyboardControl implements KeyListener {
 
-	boolean[] keys = new boolean[256];
+	boolean[] keys = new boolean[KeyEvent.KEY_LAST];
 	
 	public KeyboardControl(Component c){
         for(int k = 0; k < 256; k++)

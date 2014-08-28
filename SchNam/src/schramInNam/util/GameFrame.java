@@ -17,23 +17,19 @@ import schramInNam.util.interfaces.Updatable;
 
 public class GameFrame extends JFrame implements Updatable {
 	private static final long serialVersionUID = 11011955L;
-	
+		
+	private RenderingEngine renderer;
+	KeyboardControl keyboard;
+	MouseControl mouse;
+	BufferedImage backBuffer;
+	AbstractScreen currentScreen, titleScreen, mainMenuScreen, level1Screen, cutscene1Screen;
+
 	public static final int TITLE = 0;
 	public static final int MAIN_MENU = 0;
 	
 	public final int windowWidth = 800, windowHeight = 600;
-	
 	boolean isRunning, canRender;
 	
-	private RenderingEngine renderer;
-	
-	KeyboardControl keyboard;
-	MouseControl mouse;
-	
-	BufferedImage backBuffer;
-	
-	AbstractScreen currentScreen, titleScreen, mainMenuScreen, level1Screen, cutscene1Screen;
-
 	public GameFrame() {
 		super();
 		
@@ -71,12 +67,9 @@ public class GameFrame extends JFrame implements Updatable {
 			canRender = true;
 
 			time = (1000 / 30) - (System.currentTimeMillis() - time);
-//			System.out.println(time);
 
 			if (time > 0) {
-				try{
-					Thread.sleep(time);
-				}catch(Exception e){}
+				delay(time);
 			}
 		}
 	}
@@ -104,5 +97,12 @@ public class GameFrame extends JFrame implements Updatable {
 	public KeyboardControl getKeyboard() {
 		return this.keyboard;
 	}
+	
+	public static void delay(long n){
+		long startDelay = System.currentTimeMillis();
+		long endDelay = 0;
+		while (endDelay - startDelay < n)
+			endDelay = System.currentTimeMillis();
+	}	
 
 }
