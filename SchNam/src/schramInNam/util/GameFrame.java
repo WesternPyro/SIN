@@ -67,7 +67,9 @@ public class GameFrame extends JFrame implements Updatable {
 			time = (1000 / 30) - (System.currentTimeMillis() - time);
 
 			if (time > 0) {
-				delay(time);
+				try {
+					Thread.sleep(time);
+				} catch (InterruptedException e) {e.printStackTrace();}
 			}
 		}
 	}
@@ -95,12 +97,4 @@ public class GameFrame extends JFrame implements Updatable {
 	public KeyboardControl getKeyboard() {
 		return this.keyboard;
 	}
-	
-	public static void delay(long n){
-		long startDelay = System.currentTimeMillis();
-		long endDelay = 0;
-		while (endDelay - startDelay < n)
-			endDelay = System.currentTimeMillis();
-	}	
-
 }

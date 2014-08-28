@@ -30,7 +30,7 @@ public class RenderingEngine extends Thread {
 			time = (1000 / fps) - (System.currentTimeMillis() - time);
 			if (time > 0){
 				try{
-					GameFrame.delay(time);
+					Thread.sleep(time);
 				}
 				catch(Exception e){}
 			}
