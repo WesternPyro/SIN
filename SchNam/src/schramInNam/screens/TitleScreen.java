@@ -1,7 +1,9 @@
 package schramInNam.screens;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 
+import schramInNam.media.ImageLoader;
 import schramInNam.util.GameFrame;
 import schramInNam.util.abstracts.AbstractScreen;
 
@@ -20,6 +22,10 @@ public class TitleScreen extends AbstractScreen {
 	}
 	
 	public void draw(Graphics2D g) {
+		g.setColor(new Color(255,255,255));
+		g.fillRect(50,50,50,50);
+		
+		g.drawImage(ImageLoader.items[0],150,150,null);
 	}
 
 	public void reset() {

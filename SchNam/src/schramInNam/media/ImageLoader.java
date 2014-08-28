@@ -6,17 +6,24 @@ import javax.imageio.ImageIO;
 
 public class ImageLoader {
 	
-	public static BufferedImage[] johnStand = new BufferedImage[2];;
+	public static BufferedImage[] johnStand = new BufferedImage[2];
+	public static BufferedImage[] items = new BufferedImage[10];
 	
 	static {
-		johnpics();
+		loadJohnpics();
+		loadGunModels();
 	}
 	
-	private static void johnpics() {
-		johnStand = new BufferedImage[2];
+	private static void loadJohnpics() {
 		try {
 			johnStand[0] = ImageIO.read(ImageLoader.class.getClassLoader().getResource("/resources/images/entities/john/Young Schram 3.png"));
 		} catch (IOException e) {System.out.println(e);}
+	}
+	
+	private static void loadGunModels() {
+		try {
+			items[0] = ImageIO.read(ImageLoader.class.getClassLoader().getResource("/resources/images/weapons/realistic/AK-47.png"));
+		} catch (IOException e){System.out.println(e);}
 	}
 
 }

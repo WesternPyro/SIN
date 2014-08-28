@@ -31,8 +31,6 @@ public class GameFrame extends JFrame implements Updatable {
 	boolean isRunning, canRender;
 	
 	public GameFrame() {
-		super();
-		
 		setTitle("Schram in 'Nam");
 		setSize(windowWidth, windowHeight);
 		setResizable(false);
