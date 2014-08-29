@@ -9,7 +9,7 @@ public class ImageLoader {
 	public static BufferedImage[] johnStand = new BufferedImage[2];
 	public static BufferedImage[] items = new BufferedImage[10];
 	
-	static {
+	public static void loadImages() {
 		loadJohnpics();
 		loadGunModels();
 	}
@@ -17,6 +17,7 @@ public class ImageLoader {
 	private static void loadJohnpics() {
 		try {
 			johnStand[0] = ImageIO.read(ImageLoader.class.getClassLoader().getResource("/resources/images/entities/john/Young Schram 3.png"));
+			System.out.println("hello");
 		} catch (IOException e) {System.out.println(e);}
 	}
 	

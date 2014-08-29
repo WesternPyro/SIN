@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 import schramInNam.input.KeyboardControl;
 import schramInNam.input.MouseControl;
+import schramInNam.media.ImageLoader;
 import schramInNam.screens.CutsceneScreen;
 import schramInNam.screens.LevelScreen;
 import schramInNam.screens.MainMenuScreen;
@@ -38,6 +39,8 @@ public class GameFrame extends JFrame implements Updatable {
 		setVisible(true);	
 		isRunning = false;
 		canRender = false;
+		
+		ImageLoader.loadImages();
 		
 		mouse = new MouseControl(this);
 		keyboard = new KeyboardControl(this);

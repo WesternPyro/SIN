@@ -3,7 +3,7 @@ package schramInNam.screens;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-import schramInNam.media.ImageLoader;
+//import schramInNam.media.ImageLoader;
 import schramInNam.util.GameFrame;
 import schramInNam.util.abstracts.AbstractScreen;
 
