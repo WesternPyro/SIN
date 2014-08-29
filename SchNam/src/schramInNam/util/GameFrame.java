@@ -1,7 +1,9 @@
 package schramInNam.util;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Insets;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
@@ -82,11 +84,14 @@ public class GameFrame extends JFrame implements Updatable {
 	}
 	
 	public void superDraw() {
+		Insets inset = getInsets();		
+		
 		Graphics g = getGraphics();
 		Graphics2D bbg = backBuffer.createGraphics();
-		
 		currentScreen.draw(bbg);
 
+
+		
 		g.drawImage(backBuffer, 0, 0, this);
 	}
 	
