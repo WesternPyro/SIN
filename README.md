@@ -14,4 +14,5 @@ The following is the change log for Schram in 'Nam. When creating commits, pleas
 8/25/14 8:47: renamed all upgraded weapons
 
 8/29/14 2:39: added ballistic knives
-	
+
+8/29/14 5:45: gun model tweaks, plus pneumatic rifle and crossbow. drew needs to look at the shotguns.	
