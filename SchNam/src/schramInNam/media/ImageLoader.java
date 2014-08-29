@@ -2,7 +2,6 @@ package schramInNam.media;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.awt.Color;
 import javax.imageio.ImageIO;
 
 public class ImageLoader {
