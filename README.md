@@ -19,3 +19,5 @@ The following is the change log for Schram in 'Nam. When creating commits, pleas
 	
 8/29/14 3:44: reuploaded all images in the bin file.
 >>>>>>> origin/master
+
+8/29/14 6:12: Fix for all size issues in realistic gun models.
