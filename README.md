@@ -12,4 +12,6 @@ The following is the change log for Schram in 'Nam. When creating commits, pleas
 8/25/14 7:25: changed name of Elephant Gun++ to Tyrannosaur
 
 8/25/14 8:47: renamed all upgraded weapons
+
+8/29/14 2:39: added ballistic knives
 	
