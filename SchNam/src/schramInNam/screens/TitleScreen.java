@@ -25,7 +25,7 @@ public class TitleScreen extends AbstractScreen {
 		g.setColor(new Color(255,255,255));
 		g.fillRect(50,50,50,50);
 		
-		g.drawImage(ImageLoader.items[0],150,150,null);
+//		g.drawImage(ImageLoader.items[0],150,150,null);
 	}
 
 	public void reset() {
