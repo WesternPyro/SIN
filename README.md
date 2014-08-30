@@ -21,3 +21,7 @@ The following is the change log for Schram in 'Nam. When creating commits, pleas
 >>>>>>> origin/master
 
 8/29/14 6:12: Fix for all size issues in realistic gun models.
+
+8/29/14 8:31: Added Insets correction, grey window backdrop.
+
+
