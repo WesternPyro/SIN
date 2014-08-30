@@ -1,5 +1,11 @@
 package schramInNam.util;
 
+/*
+ * 
+ * 
+ * 
+ */
+
 public class RenderingEngine extends Thread {
 
 	private int fps;

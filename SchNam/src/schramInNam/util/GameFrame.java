@@ -17,6 +17,12 @@ import schramInNam.screens.TitleScreen;
 import schramInNam.util.abstracts.AbstractScreen;
 import schramInNam.util.interfaces.Updatable;
 
+/*
+ * This class is the bulk of the program. It is a JFrame that implements the Sikora-made Updatable interface.
+ * It creates objects of the RenderingEngine, KeyboardControl, MouseControl, and AbstractScreen classes.
+ * 
+ */
+
 public class GameFrame extends JFrame implements Updatable {
 	private static final long serialVersionUID = 11011955L;
 		
@@ -32,6 +38,11 @@ public class GameFrame extends JFrame implements Updatable {
 	
 	public int windowWidth = 800, windowHeight = 600;
 	boolean isRunning, canRender;
+	
+	/*
+	 * The constructor of this class sets JFrame attributes, creates the back buffering, and makes new objects
+	 * of the screens made previously
+	 */
 	
 	
 	public GameFrame() {
@@ -59,6 +70,12 @@ public class GameFrame extends JFrame implements Updatable {
 		currentScreen = titleScreen;
 	}
 	
+	/*
+	 * This is the run method called by the Main class. It has an infinite while loop
+	 * that takes the current time, renders the game, then delays to give an illusion
+	 * of 30 frames per second. AND YEAH I USED THREAD.SLEEP ARE YOU HAPPY NOW EH?!?!?!
+	 */
+	
 	public void run() {
 		renderer.start();
 		isRunning = true;
@@ -80,9 +97,20 @@ public class GameFrame extends JFrame implements Updatable {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see schramInNam.util.interfaces.Updatable#update()
+	 * 
+	 * updates the current screen.
+	 */
+	
 	public void update() {
 		currentScreen.update();
 	}
+	
+	/*
+	 * called in the RenderingEngine class
+	 */
 	
 	public void superDraw() {
 		insets = getInsets();
@@ -96,8 +124,11 @@ public class GameFrame extends JFrame implements Updatable {
 	
 		g.drawImage(backBuffer, 0, 0, this);
 	}
-	
+	/*
+	 * This sets the screen of the current program output
+	 */
 	public void setScreen(int screen) {
+		
 	}
 	
 	public MouseControl getMouse() {

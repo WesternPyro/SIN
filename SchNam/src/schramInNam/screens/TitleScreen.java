@@ -31,10 +31,12 @@ public class TitleScreen extends AbstractScreen {
 		g.setColor(new Color(200,200,200));
 		g.fillRect(0,0,799,599);
 		
-		g.drawImage(ImageLoader.items[0],150,150,null);
+		g.drawImage(ImageLoader.firearms[0],150,150,null);
 		at.rotate(rotation,60/2,56/2);
 		
-		g.drawImage(ImageLoader.items[1], at, null);
+		g.drawImage(ImageLoader.firearms[1], at, null);
+		
+		g.drawImage(ImageLoader.johnStand[0],300,300,null);
 		
 	}
 
