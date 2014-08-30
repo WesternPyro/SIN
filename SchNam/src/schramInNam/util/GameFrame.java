@@ -1,6 +1,5 @@
 package schramInNam.util;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Insets;
@@ -37,7 +36,7 @@ public class GameFrame extends JFrame implements Updatable {
 	
 	public GameFrame() {
 		setTitle("Schram in 'Nam");
-		setSize(300,300);
+		setSize(100,100);
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);	
@@ -87,20 +86,14 @@ public class GameFrame extends JFrame implements Updatable {
 	
 	public void superDraw() {
 		insets = getInsets();
-		
 		Graphics g = getGraphics();
 		Graphics2D g2D = (Graphics2D) g;
 		g2D.translate(insets.left, insets.top);
 		
 		Graphics2D bbg = backBuffer.createGraphics();
-	
-		setSize(windowWidth + insets.left + insets.right,windowHeight + insets.top + insets.bottom);
-
-		
+		setSize(windowWidth + insets.left + insets.right,windowHeight + insets.top + insets.bottom);		
 		currentScreen.draw(bbg);
-
-
-		
+	
 		g.drawImage(backBuffer, 0, 0, this);
 	}
 	
