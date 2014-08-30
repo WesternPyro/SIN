@@ -26,16 +26,18 @@ public class GameFrame extends JFrame implements Updatable {
 	MouseControl mouse;
 	BufferedImage backBuffer;
 	AbstractScreen currentScreen, titleScreen, mainMenuScreen, level1Screen, cutscene1Screen;
+	Insets insets;
 
 	public static final int TITLE = 0;
 	public static final int MAIN_MENU = 0;
 	
-	public final int windowWidth = 800, windowHeight = 600;
+	public int windowWidth = 800, windowHeight = 600;
 	boolean isRunning, canRender;
+	
 	
 	public GameFrame() {
 		setTitle("Schram in 'Nam");
-		setSize(windowWidth, windowHeight);
+		setSize(300,300);
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);	
@@ -84,10 +86,17 @@ public class GameFrame extends JFrame implements Updatable {
 	}
 	
 	public void superDraw() {
-		Insets inset = getInsets();		
+		insets = getInsets();
 		
 		Graphics g = getGraphics();
+		Graphics2D g2D = (Graphics2D) g;
+		g2D.translate(insets.left, insets.top);
+		
 		Graphics2D bbg = backBuffer.createGraphics();
+	
+		setSize(windowWidth + insets.left + insets.right,windowHeight + insets.top + insets.bottom);
+
+		
 		currentScreen.draw(bbg);
 
 
