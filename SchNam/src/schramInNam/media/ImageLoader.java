@@ -20,9 +20,14 @@ public class ImageLoader {
 		} catch (IOException e) {System.out.println(e);}
 	}
 	
+	public static void loadNewChar() {
+		
+	}
+	
 	private static void loadGunModels() {
 		try {
 			items[0] = ImageIO.read(ImageLoader.class.getResource("/resources/images/weapons/realistic/AK-47.png"));
+			items[1] = ImageIO.read(ImageLoader.class.getResource("/resources/images/weapons/fantasy/SonicScrewdriver.png"));
 		} catch (IOException e){System.out.println(e);}
 	}
 }
