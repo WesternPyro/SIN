@@ -10,7 +10,7 @@ import schramInNam.util.abstracts.AbstractScreen;
 
 public class TitleScreen extends AbstractScreen {
 	
-	int x = 250;
+	int x = 350;
 	int y = 150;
 	AffineTransform at;
 	double rotation = .1;
