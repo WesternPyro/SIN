@@ -33,7 +33,7 @@ public class TitleScreen extends AbstractScreen {
 		
 		g.drawImage(ImageLoader.firearms[0],150,150,null);
 		at.rotate(rotation,60/2,56/2);
-		
+//		at.scale(.5,.5);
 		g.drawImage(ImageLoader.firearms[1], at, null);
 		
 		g.drawImage(ImageLoader.johnStand[0],300,300,null);
