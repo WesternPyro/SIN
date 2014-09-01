@@ -54,7 +54,7 @@ public class GameFrame extends JFrame implements Updatable {
 		isRunning = false;
 		canRender = false;
 		
-		ImageLoader.loadImages();
+		ImageLoader.loadAllImages();
 		
 		mouse = new MouseControl(this);
 		keyboard = new KeyboardControl(this);

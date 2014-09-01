@@ -38,6 +38,7 @@ public class TitleScreen extends AbstractScreen {
 		
 		g.drawImage(ImageLoader.johnStand[0],300,300,null);
 		
+		g.drawImage(ImageLoader.firearms[2],150,175,null);
 	}
 
 	public void reset() {
