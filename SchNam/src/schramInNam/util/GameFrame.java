@@ -106,6 +106,8 @@ public class GameFrame extends JFrame implements Updatable {
 	
 	public void update() {
 		currentScreen.update();
+		
+		System.out.println("X= " + mouse.getX() + " Y= " + mouse.getY());
 	}
 	
 	/*
