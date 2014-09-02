@@ -58,7 +58,7 @@ public class GameFrame extends JFrame implements Updatable {
 		isRunning = false;
 		canRender = false;
 		
-		ImageLoader.loadImages();
+		ImageLoader.loadAllImages();
 		
 		projectileController = new ProjectileController();
 		mouse = new MouseControl(this);
@@ -111,6 +111,8 @@ public class GameFrame extends JFrame implements Updatable {
 	
 	public void update() {
 		currentScreen.update();
+		
+		System.out.println("X= " + mouse.getX() + " Y= " + mouse.getY());
 	}
 	
 	/*
