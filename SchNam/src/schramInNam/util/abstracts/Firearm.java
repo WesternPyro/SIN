@@ -12,21 +12,22 @@ public class Firearm{
 	private AffineTransform at;
 	private Point aimPoint;
 	private Graphics2D g2D;
+	private ProjectileController pc;
 	private int x = 10, y = 10;
 	private int id;
 	private int baseDamage;
-	private int baseRecoil;
 	private int baseRoF;
 	
-	public Firearm(int identity, Entity entity){
-		holder = entity;
+	public Firearm(int identity, ProjectileController projctrl/*, Entity entity*/){
+//		holder = entity;
+		pc = projctrl;
 		id = identity;
 		at = new AffineTransform();
 		at.setTransform(1,0,0,1,x,y);
 	}
 	
 	public void fire(){
-		
+		pc.add(new Projectile(x,y,0));
 	}
 
 	public void draw(Graphics g){

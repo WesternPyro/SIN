@@ -20,16 +20,15 @@ public class Projectile{
 		laserDirection = direction + Math.toRadians(-2);
 	}
 	
-	public void update(Graphics g){
+	public void update(){
 		at.setTransform(1,0,0,1,laserX,laserY);
 		at.rotate(laserDirection,15,15);
-		g2D = (Graphics2D) g;
-//		g2D.drawImage(ImageLoader.george,at,null);
-		
-		g.drawRect(laserX,laserY,30,30);
-		
 		laserX -= SPEED * Math.cos(laserDirection);
 		laserY -= SPEED * Math.sin(laserDirection);
+	}
+	
+	public void draw(Graphics g){
+		
 	}
 
 	public Point getLocation(){

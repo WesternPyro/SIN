@@ -6,7 +6,7 @@ import javax.imageio.ImageIO;
 
 public class ImageLoader {
 	
-	public static BufferedImage[] johnStand = new BufferedImage[2];
+	public static BufferedImage[] johnStand = new BufferedImage[3];
 	public static BufferedImage[] firearms = new BufferedImage[10];
 	
 	public static void loadImages() {
@@ -17,11 +17,9 @@ public class ImageLoader {
 	private static void loadJohnpics() {
 		try {
 			johnStand[0] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram3.png"));
+			johnStand[1] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram2.png"));
+			johnStand[2] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram1.png"));			
 		} catch (IOException e) {System.out.println(e);}
-	}
-	
-	public static void loadNewChar() {
-		
 	}
 	
 	private static void loadGunModels() {

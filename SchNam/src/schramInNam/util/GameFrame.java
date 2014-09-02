@@ -15,6 +15,7 @@ import schramInNam.screens.LevelScreen;
 import schramInNam.screens.MainMenuScreen;
 import schramInNam.screens.TitleScreen;
 import schramInNam.util.abstracts.AbstractScreen;
+import schramInNam.util.abstracts.ProjectileController;
 import schramInNam.util.interfaces.Updatable;
 
 /*
@@ -36,8 +37,11 @@ public class GameFrame extends JFrame implements Updatable {
 	public static final int TITLE = 0;
 	public static final int MAIN_MENU = 0;
 	
-	public int windowWidth = 800, windowHeight = 600;
+	public static int windowWidth = 800;
+	public static int windowHeight = 600;
 	boolean isRunning, canRender;
+
+	private ProjectileController projectileController;
 	
 	/*
 	 * The constructor of this class sets JFrame attributes, creates the back buffering, and makes new objects
@@ -56,6 +60,7 @@ public class GameFrame extends JFrame implements Updatable {
 		
 		ImageLoader.loadImages();
 		
+		projectileController = new ProjectileController();
 		mouse = new MouseControl(this);
 		keyboard = new KeyboardControl(this);
 		
@@ -131,11 +136,9 @@ public class GameFrame extends JFrame implements Updatable {
 		
 	}
 	
-	public MouseControl getMouse() {
-		return this.mouse;
-	}
+	public MouseControl getMouse() {return this.mouse;}
 	
-	public KeyboardControl getKeyboard() {
-		return this.keyboard;
-	}
+	public KeyboardControl getKeyboard() {return this.keyboard;}
+	
+	public ProjectileController getProjectileController(){return this.projectileController;}
 }
