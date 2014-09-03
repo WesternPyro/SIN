@@ -22,3 +22,5 @@ The following is the change log for Schram in 'Nam. When creating commits, pleas
 8/29/14 8:31: Added Insets correction, grey window backdrop.
 
 8/30/14 11:05 PM: Fiddling around with things, added Firearm and Projectile classes. No change to main program.
+
+9/2/14 8:38 PM: Made some random stuff that affected firearms. It mostly works.
