@@ -17,6 +17,8 @@ public class Firearm{
 	private int id;
 	private int baseDamage;
 	private int baseRoF;
+	private int baseDelay;
+	private boolean isFiring;
 	
 	public Firearm(int identity, ProjectileController projctrl/*, Entity entity*/){
 //		holder = entity;
@@ -27,6 +29,9 @@ public class Firearm{
 	}
 	
 	public void fire(){
+		
+		
+		
 		pc.add(new Projectile(x,y,0));
 	}
 
