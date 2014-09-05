@@ -6,6 +6,7 @@ import java.awt.Point;
 import java.awt.geom.AffineTransform;
 
 import schramInNam.media.ImageLoader;
+import schramInNam.util.GameFrame;
 
 public class Firearm{
 	private Entity holder;
@@ -18,21 +19,33 @@ public class Firearm{
 	private int baseDamage;
 	private int baseRoF;
 	private int baseDelay;
-	private boolean isFiring;
+	private boolean canFire;
+	private GameFrame game;
+	private Mouse mouse;
 	
-	public Firearm(int identity, ProjectileController projctrl/*, Entity entity*/){
+	public Firearm(int identity, ProjectileController projctrl, GameFrame game/*, Entity entity*/){
 //		holder = entity;
 		pc = projctrl;
 		id = identity;
+		this.game = game;
+		this.mouse = game.getMouse();
 		at = new AffineTransform();
 		at.setTransform(1,0,0,1,x,y);
+		baseDelay = 100;
+		canFire = true;
 	}
 	
 	public void fire(){
-		
-		
-		
-		pc.add(new Projectile(x,y,0));
+		if(canFire){
+			canFire= false;
+			pc.add(new Projectile(x,y,0));
+			long start= System.currentTimeMillis();
+			long end = 0;
+			while(end - start < baseDelay){
+				end = System.currentTimeMillis();
+			}
+			canFire = true;
+		}
 	}
 
 	public void draw(Graphics g){

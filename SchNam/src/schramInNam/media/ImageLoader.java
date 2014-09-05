@@ -20,7 +20,7 @@ public class ImageLoader {
 		try {
 			johnStand[0] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram3.png"));
 			johnStand[1] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram2.png"));
-			johnStand[2] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram1.png"));			
+//			johnStand[2] = ImageIO.read(ImageLoader.class.getResource("/resources/images/entities/john/YoungSchram.png"));			
 		} catch (IOException e) {System.out.println(e);}
 	}
 	
