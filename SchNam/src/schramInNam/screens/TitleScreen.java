@@ -19,7 +19,7 @@ public class TitleScreen extends AbstractScreen {
 		this.keyboard = game.getKeyboard();
 		this.pc = game.getProjectileController();
 		
-		ak = new Firearm(0,pc);
+		ak = new Firearm(0,pc,game);
 	}
 	
 	public void update() {
@@ -40,5 +40,4 @@ public class TitleScreen extends AbstractScreen {
 	public void reset() {
 		
 	}
-
 }

@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.geom.AffineTransform;
 
+import schramInNam.input.MouseControl;
 import schramInNam.media.ImageLoader;
 import schramInNam.util.GameFrame;
 
@@ -21,7 +22,7 @@ public class Firearm{
 	private int baseDelay;
 	private boolean canFire;
 	private GameFrame game;
-	private Mouse mouse;
+	private MouseControl mouse;
 	
 	public Firearm(int identity, ProjectileController projctrl, GameFrame game/*, Entity entity*/){
 //		holder = entity;
@@ -48,7 +49,7 @@ public class Firearm{
 		}
 	}
 
-	public void draw(Graphics g){
+	public void draw(Graphics g){		
 		g2D = (Graphics2D) g;
 		g2D.drawImage(ImageLoader.firearms[id],at,null);
 	}
